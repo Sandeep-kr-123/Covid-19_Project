@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Document</title>
+</head>
+
+<body>
+    <div class="container">
+
+        <div class="box">
+            <h1>Log In</h1>
+            <div>
+                <input type="text" name="userid" id="userid" placeholder="Email address or Phone number">
+            </div>
+            <div>
+                <input type="password" name="passwd" id="passwd" placeholder="Password" onblur="checkpasswd()">
+                <div id="feedback"></div>
+            </div>
+            <div>
+                <button class="signupbtn">Log In</button>
+            </div>
+            <h4><a href="" id="forgetpasswd">Forgotten password?</a></h4>
+            <hr>
+            <P>or</P>
+            <div>
+                <!-- Trigger/Open The Modal -->
+                <button style="background-color: green;" id="myBtn" class="signupbtn">Create New Account</button>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <div>
+            <span>
+                <hr> Covid Status © 2021
+                <hr>
+            </span>
+        </div>
+    </footer>
+
+
+
+
+
+
+
+
+
+
+    <!-- The Modal -->
+    <div id="myModal" class="modal">
+
+        <!-- Modal content -->
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <!-- <div> -->
+            <div class="container">
+                <div class="box">
+                    <h1>Sign Up</h1>
+                    <section>
+                        <div><input type="text" id="firstname" placeholder="First name">
+                        </div>
+                        <div><input type="text" placeholder="Surname"></div>
+                        <div>
+                            <input type="text" id="userid" placeholder="Email address or Phone number">
+                        </div>
+                        <div>
+                            <input type="password" id="password" placeholder="New password">
+                        </div>
+                        <div>
+                            <!-- <button onclick="window.location.href='home.html';">Sign Up</button> -->
+                            <button class="signupbtn">Sign Up</button>
+                        </div>
+                    </section>
+                    <br><br>
+                    <div>
+                        <hr>
+                        <p>By clicking Sign Up, you agree to our <a href="">Terms</a>,<br><a href="">Data Policy</a> and
+                            <a href="">Cookie Policy</a>.
+                        </p>
+                        <hr>
+                    </div>
+                </div>
+            </div>
+            <!-- </div> -->
+        </div>
+
+    </div>
+
+
+
+
+
+
+
+
+
+
+
+
+    <script>
+        // Get the modal
+        var modal = document.getElementById("myModal");
+
+        // Get the button that opens the modal
+        var btn = document.getElementById("myBtn");
+
+        // Get the <span> element that closes the modal
+        var span = document.getElementsByClassName("close")[0];
+
+        // When the user clicks the button, open the modal 
+        btn.onclick = function () {
+            modal.style.display = "block";
+        }
+
+        // When the user clicks on <span> (x), close the modal
+        span.onclick = function () {
+            modal.style.display = "none";
+        }
+
+        // When the user clicks anywhere outside of the modal, close it
+        window.onclick = function (event) {
+            if (event.target == modal) {
+                modal.style.display = "none";
+            }
+        }
+    </script>
+
+</body>
+
+</html>
